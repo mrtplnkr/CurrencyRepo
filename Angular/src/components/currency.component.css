@@ -1,0 +1,19 @@
+.warning-text {
+    color: red;
+}
+
+select, input, form, label {
+    padding: 5px;
+    margin: 5px;
+}
+
+form.ng-submitted.ng-invalid.ng-touched {
+    border: pink 1px solid;
+}
+
+input.ng-invalid.ng-touched {
+    border: red 1px solid;
+}
+select.ng-touched.ng-invalid {
+    border: purple 1px solid;
+}

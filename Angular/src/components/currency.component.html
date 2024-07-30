@@ -1,0 +1,30 @@
+<div>
+    <h3>Currency {{title}} !</h3>
+    <form [formGroup]="applyForm" class="form-inline" (ngSubmit)="onSubmit()">
+        <label>
+            from - <select formControlName="from" required>
+                <option *ngFor="let o of this.currencies">
+                    {{o.currency}}
+                </option>
+            </select>
+        </label>
+        <label>
+            to - <select formControlName="to" required>
+                <option *ngFor="let o of this.currencies">
+                    {{o.currency}}
+                </option>
+            </select>
+        </label>
+        <label for="amountInput">
+            <input id="amountInput" formControlName="amount" type="number" required />
+        </label>
+
+        <input type="submit" />
+    </form>
+    <div class="warning-text">{{error}}</div>
+
+    <div *ngIf="!applyForm.invalid">You selected - {{applyForm.value.from}} - {{applyForm.value.to}}</div>
+    <div *ngIf="applyForm.invalid">Please select what currency would you like to convert</div>
+    
+    <h2 *ngIf="exchangeAmount">Rezultatas: {{exchangeAmount}}</h2>
+</div>
