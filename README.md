@@ -1,4 +1,4 @@
 # CurrencyRepo
-HttpClient downloads an xml document - done
-Handler deserialises xml into class objects - done
-Repository saves data to a model first database - in progress..
+1. HttpClient downloads an xml document - done
+2. Handler deserialises xml into class objects - done
+3. Repository saves data to an in-memory database - in progress..
